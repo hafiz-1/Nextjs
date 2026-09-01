@@ -1,4 +1,5 @@
-import Card from "./components/Card";
+
+import Counter from "./components/counter";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         Next.js Learning Project
       </h1>
 
-      <Card />
+      <Counter />
     </main>
   );
 }
