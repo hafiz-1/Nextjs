@@ -1,3 +1,3 @@
 export default function Dashboard() {
-  return <h1>Dashboard</h1>;
+  return <section><p className="text-sm font-semibold text-cyan-700">OVERVIEW</p><h1 className="mt-2 text-4xl font-bold">Your workspace</h1><div className="mt-8 grid gap-4 sm:grid-cols-3">{[["5", "Total projects"], ["2", "In progress"], ["3", "Completed"]].map(([value, label]) => <div key={label} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"><p className="text-3xl font-bold">{value}</p><p className="mt-1 text-sm text-slate-600">{label}</p></div>)}</div><div className="mt-6 rounded-xl border border-slate-200 bg-white p-6 shadow-sm"><h2 className="text-lg font-bold">Keep learning</h2><p className="mt-2 text-slate-600">This dashboard layout stays visible while you switch between its nested routes.</p></div></section>;
 }
