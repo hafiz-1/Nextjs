@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import FavoriteButton from "../../components/FavoriteButton";
-import { projects } from "../../data/projects";
+import { getProjectById } from "../../data/project-service";
 
 export default async function ProjectPage({
   params,
@@ -10,7 +10,7 @@ export default async function ProjectPage({
 }) {
   const { id } = await params;
 
-  const project = projects.find((project) => project.id === id);
+  const project = await getProjectById(id);
 
   if (!project) {
     notFound();
