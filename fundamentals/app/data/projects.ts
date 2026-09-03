@@ -1,9 +1,13 @@
+export const projectStatuses = ["Planning", "In Progress", "Completed"] as const;
+
+export type ProjectStatus = (typeof projectStatuses)[number];
+
 export type Project = {
   id: string;
   title: string;
   description: string;
   technology: string;
-  status: "Planning" | "In Progress" | "Completed";
+  status: ProjectStatus;
 };
 
 export const projects: Project[] = [
